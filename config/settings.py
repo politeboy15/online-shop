@@ -7,7 +7,7 @@ load_dotenv()
 BASE_DIR = Path(__file__).resolve().parent.parent
 
 
-SECRET_KEY = os.environ.get('django-insecure-#ebj3603$h#v+kj+&ukm_r@h45wmc_wtr0pt73@9#c!&fi9ddv')
+SECRET_KEY = 'django-insecure-#ebj3603$h#v+kj+&ukm_r@h45wmc_wtr0pt73@9#c!&fi9ddv'
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
@@ -70,12 +70,8 @@ WSGI_APPLICATION = 'config.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'mahalla_yordam',
-        'USER': 'hokim',
-        'PASSWORD': 'root',
-        'HOST': 'localhost',
-        'PORT': '5432',
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': BASE_DIR / 'db.sqlite3',
     }
 }
 

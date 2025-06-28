@@ -23,7 +23,7 @@ scheme_view = get_schema_view(
     openapi.Info(
         title="API",
         default_version='v1',
-        description="E-commerce API",
+        description="Online Shop API",
         terms_of_service="https://www.google.com/policies/terms/",
         contact=openapi.Contact(email="contact@myapi.local"),
         license=openapi.License(name="BSD License"),
@@ -35,6 +35,7 @@ scheme_view = get_schema_view(
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('accounts/', include('django.contrib.auth.urls')),
     path('api/v1/', include('products.urls')),
     path('api/v1/sms-auth/', include('custom_auth.urls')),
 
